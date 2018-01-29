@@ -156,10 +156,20 @@
             {
               "listen": "test",
               "script": {
-                "id": "61525c19-47dc-4488-a7f7-de149f89ffc4",
+                "id": "5f578648-0dcf-4f65-87b8-13c897d85da2",
                 "type": "text/javascript",
                 "exec": [
-                  ""
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Message is found\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"Terms found successfully\");",
+                  "});"
                 ]
               }
             }
