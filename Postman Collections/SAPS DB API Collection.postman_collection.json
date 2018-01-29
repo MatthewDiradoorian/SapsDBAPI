@@ -1,0 +1,781 @@
+{
+	"info": {
+		"name": "SAPS DB API Collection",
+		"_postman_id": "41ecb4f6-3738-cccc-0246-9a1e558f8165",
+		"description": "This is what we can get out of the SAPS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Request",
+			"item": [
+				{
+					"name": "GetAdminById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22ab57ba-9b45-48fa-9067-f924054babfc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}admin/{{Ian}}",
+							"host": [
+								"{{host}}admin"
+							],
+							"path": [
+								"{{Ian}}"
+							]
+						},
+						"description": "This is where you can get the Admin by its their portal username."
+					},
+					"response": []
+				},
+				{
+					"name": "GetStudentById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "09af1946-c9f4-4271-af65-e5f23dc2f4db",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}student/{{Matthew}}",
+							"host": [
+								"{{host}}student"
+							],
+							"path": [
+								"{{Matthew}}"
+							]
+						},
+						"description": "This is where you can get the student by their portal username."
+					},
+					"response": [
+						{
+							"id": "a3005cfc-1a55-4a0d-a883-e10c1daa543e",
+							"name": "GetStudentById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "G-TOKEN",
+										"value": "ROM831ESV",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}api/student/icl33037",
+									"host": [
+										"{{host}}api"
+									],
+									"path": [
+										"student",
+										"icl33037"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Length",
+									"value": "360",
+									"name": "Content-Length",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2018 19:23:26 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET",
+									"name": "X-Powered-By",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "151",
+							"body": "{\"payload\":{\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"preferredFirstName\":null,\"preferredLastName\":null,\"emailAddress\":\"ian.laue.268@my.csun.edu\",\"phoneNumber\":\"818-434-1351\",\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"major3\":null,\"minor1\":null,\"minor2\":null},\"message\":\"Student found successfully\",\"statusCode\":200}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Course Controller",
+			"description": "",
+			"item": [
+				{
+					"name": "GetListOfAllClasses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b0e9a870-7f6d-4c75-ba47-605ec6f21e81",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}class",
+							"host": [
+								"{{host}}class"
+							]
+						},
+						"description": "This gets all of the Classes"
+					},
+					"response": [
+						{
+							"id": "337c97a1-a967-4c6c-ad08-677b5bce0863",
+							"name": "GetListOfAllClasses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "G-TOKEN",
+										"value": "ROM831ESV",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}api/class",
+									"host": [
+										"{{host}}api"
+									],
+									"path": [
+										"class"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2018 19:24:03 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"name": "transfer-encoding",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "77",
+							"body": "{\"payload\":[{\"courseName\":\"ACCT 220\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Intro to Financial Accounting\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"09:30:00\",\"endTime\":\"10:45:00\",\"sectionId\":13438,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"TR\",\"startTime\":\"08:00:00\",\"endTime\":\"09:15:00\",\"sectionId\":13439,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"TR\",\"startTime\":\"09:30:00\",\"endTime\":\"10:45:00\",\"sectionId\":13440,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"F\",\"startTime\":\"11:00:00\",\"endTime\":\"13:45:00\",\"sectionId\":13441,\"instructor\":\"STAFF\",\"room\":\"CR5125\"},{\"day\":\"R\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13442,\"instructor\":\"STAFF\",\"room\":\"SQ104\"}]},{\"courseName\":\"ACCT 230\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Intro to Managerial Accounting\",\"sections\":[{\"day\":\"TR\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13443,\"instructor\":\"STAFF\",\"room\":\"JH1117\"},{\"day\":\"F\",\"startTime\":\"08:00:00\",\"endTime\":\"10:45:00\",\"sectionId\":13444,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"F\",\"startTime\":\"11:00:00\",\"endTime\":\"13:45:00\",\"sectionId\":13445,\"instructor\":\"STAFF\",\"room\":\"JH1117\"},{\"day\":\"TR\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13446,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13447,\"instructor\":\"HER, YOUNG WON\",\"room\":\"OV025\"},{\"day\":\"MW\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13408,\"instructor\":\"STAFF\",\"room\":\"JH1117\"}]},{\"courseName\":\"ACCT 350\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Intermediate Financial Accounting I\",\"sections\":[{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13618,\"instructor\":\"STAFF\",\"room\":\"LA181\"}]},{\"courseName\":\"ACCT 351\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Intermediate Financial Accounting II\",\"sections\":[{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13474,\"instructor\":\"DORON, MICHAEL\",\"room\":\"JH1125\"},{\"day\":\"MW\",\"startTime\":\"11:00:00\",\"endTime\":\"12:15:00\",\"sectionId\":13335,\"instructor\":\"CHEN, KEJI\",\"room\":\"JH1117\"},{\"day\":\"MW\",\"startTime\":\"14:00:00\",\"endTime\":\"15:15:00\",\"sectionId\":13336,\"instructor\":\"CHEN, KEJI\",\"room\":\"JH1117\"}]},{\"courseName\":\"ACCT 351 COM\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Communication for Accountants\",\"sections\":[{\"day\":\"F\",\"startTime\":\"11:00:00\",\"endTime\":\"13:45:00\",\"sectionId\":13464,\"instructor\":\"DOSANJH, KIREN\",\"room\":\"JH2204\"},{\"day\":\"MW\",\"startTime\":\"11:00:00\",\"endTime\":\"12:15:00\",\"sectionId\":13365,\"instructor\":\"DOSANJH, KIREN\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 352\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Intermediate Financial Accounting III\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"14:00:00\",\"endTime\":\"15:15:00\",\"sectionId\":13367,\"instructor\":\"STAFF\",\"room\":\"JH1119\"},{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13354,\"instructor\":\"YOON, SUNG WOOK\",\"room\":\"JH1202\"},{\"day\":\"TR\",\"startTime\":\"15:30:00\",\"endTime\":\"16:45:00\",\"sectionId\":13337,\"instructor\":\"YOON, SUNG WOOK\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 380\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Cost Measurement and Analysis\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"12:30:00\",\"endTime\":\"13:45:00\",\"sectionId\":13338,\"instructor\":\"HER, YOUNG WON\",\"room\":\"JH2204\"},{\"day\":\"T\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13375,\"instructor\":\"ZHAN, JUN\",\"room\":\"JH1117\"},{\"day\":\"MW\",\"startTime\":\"15:30:00\",\"endTime\":\"16:45:00\",\"sectionId\":13366,\"instructor\":\"ZHAN, JUN\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 425\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Senior Seminar\",\"sections\":[]},{\"courseName\":\"ACCT 440\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Taxation of Business Entities and Individuals\",\"sections\":[{\"day\":\"TR\",\"startTime\":\"12:30:00\",\"endTime\":\"13:45:00\",\"sectionId\":13339,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"TR\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13466,\"instructor\":\"STAFF\",\"room\":\"JH1119\"},{\"day\":\"R\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13472,\"instructor\":\"STAFF\",\"room\":\"JH1117\"}]},{\"courseName\":\"ACCT 441\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Advanced Studies in Taxation\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13340,\"instructor\":\"GIANNI, MONICA\",\"room\":\"JH2204\"},{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13341,\"instructor\":\"GIANNI, MONICA\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 450\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Advanced Financial Accounting\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"14:00:00\",\"endTime\":\"15:15:00\",\"sectionId\":13342,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"T\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13528,\"instructor\":\"CHEN, KEJI\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 460\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Auditing Principles\",\"sections\":[{\"day\":\"TR\",\"startTime\":\"14:00:00\",\"endTime\":\"15:15:00\",\"sectionId\":13343,\"instructor\":\"DORON, MICHAEL\",\"room\":\"JH2204\"},{\"day\":\"T\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13473,\"instructor\":\"DORON, MICHAEL\",\"room\":\"JH1119\"},{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13527,\"instructor\":\"ZHAN, JUN\",\"room\":\"JH1119\"}]},{\"courseName\":\"ACCT 496 AZ\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Experimental Topics Courses\",\"sections\":[]},{\"courseName\":\"ACCT 497 AZ\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Special Topics in Accounting\",\"sections\":[{\"day\":\"R\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":19968,\"instructor\":\"STAFF\",\"room\":\"JH2204\"}]},{\"courseName\":\"ACCT 499 AC\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Independent Study Accounting\",\"sections\":[]},{\"courseName\":\"IS 212\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Information Systems for Business Users\",\"sections\":[]},{\"courseName\":\"IS 312\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Information Systems for Business Managers\",\"sections\":[{\"day\":\"MW\",\"startTime\":\"17:00:00\",\"endTime\":\"18:15:00\",\"sectionId\":13478,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"TR\",\"startTime\":\"12:30:00\",\"endTime\":\"13:45:00\",\"sectionId\":13479,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"TR\",\"startTime\":\"14:00:00\",\"endTime\":\"15:15:00\",\"sectionId\":13480,\"instructor\":\"ZHANG, YUE\",\"room\":\"JH2212\"},{\"day\":\"F\",\"startTime\":\"11:00:00\",\"endTime\":\"13:45:00\",\"sectionId\":13481,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"F\",\"startTime\":\"14:00:00\",\"endTime\":\"16:45:00\",\"sectionId\":13482,\"instructor\":\"LIU, DAIVD\",\"room\":\"JH2212\"},{\"day\":\"F\",\"startTime\":\"18:00:00\",\"endTime\":\"20:45:00\",\"sectionId\":13483,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"M\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13484,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"TR\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13485,\"instructor\":\"STAFF\",\"room\":\"JH2212\"},{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13486,\"instructor\":\"ZHANG, YUE\",\"room\":\"JH2125\"},{\"day\":\"F\",\"startTime\":\"08:00:00\",\"endTime\":\"10:45:00\",\"sectionId\":13487,\"instructor\":\"lIU, DAIVD\",\"room\":\"JH2212\"}]},{\"courseName\":\"IS 335\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Information Technology in Business\",\"sections\":[{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13390,\"instructor\":\"STAFF\",\"room\":\"JH2212\"}]},{\"courseName\":\"IS 431\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Systems Analysis and Design\",\"sections\":[{\"day\":\"TR\",\"startTime\":\"11:00:00\",\"endTime\":\"12:15:00\",\"sectionId\":13344,\"instructor\":\"NGUYEN, DAT DAO\",\"room\":\"JH1119\"},{\"day\":\"R\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13775,\"instructor\":\"NGUYEN, DAT DAO\",\"room\":\"JH1119\"}]},{\"courseName\":\"IS 435\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Business Data Communications and Networking\",\"sections\":[{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13774,\"instructor\":\"YE, LI R\",\"room\":\"JH1117\"},{\"day\":\"TR\",\"startTime\":\"09:30:00\",\"endTime\":\"10:45:00\",\"sectionId\":13345,\"instructor\":\"YE, LI R\",\"room\":\"JH1119\"}]},{\"courseName\":\"IS 441\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Database Management Systems\",\"sections\":[{\"day\":\"TR\",\"startTime\":\"11:00:00\",\"endTime\":\"12:15:00\",\"sectionId\":13346,\"instructor\":\"ZHANG, YUE\",\"room\":\"JH2212\"},{\"day\":\"M\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13773,\"instructor\":\"STAFF\",\"room\":\"JH2125\"}]},{\"courseName\":\"IS 451\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Systems Development Project\",\"sections\":[{\"day\":\"W\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13380,\"instructor\":\"STAFF\",\"room\":\"JH2204\"},{\"day\":\"R\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13494,\"instructor\":\"YE, LI R\",\"room\":\"JH1206\"}]},{\"courseName\":\"IS 455\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Advanced Application Development\",\"sections\":[]},{\"courseName\":\"IS 457\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Advanced Telecommunications and Networking\",\"sections\":[]},{\"courseName\":\"IS 497 AZ\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Special Topics in Information Systems\",\"sections\":[{\"day\":\"M \",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13579,\"instructor\":\"LIU, DAIVD\",\"room\":\"JH1202\"},{\"day\":\"TR\",\"startTime\":\"19:00:00\",\"endTime\":\"21:45:00\",\"sectionId\":13745,\"instructor\":\"STAFF\",\"room\":\"JH1210\"}]},{\"courseName\":\"IS 498 AC\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Field Assignments and Reports Information Systems\",\"sections\":[]},{\"courseName\":\"IS 499 AC\",\"termCode\":2175,\"courseLevel\":\"Upper Division\",\"courseDescription\":\"Independent Study\",\"sections\":[]}],\"message\":\"Classes found successfully\",\"statusCode\":200}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Term Controller",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Terms",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "61525c19-47dc-4488-a7f7-de149f89ffc4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}term",
+							"host": [
+								"{{host}}term"
+							]
+						},
+						"description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "af820438-fda8-4136-98ce-9d2e68b7610d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c1b2bde-1342-4743-aebf-9d330ff152e8",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Message is found\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Terms found successfully\");",
+							"});",
+							"",
+							"pm.sendRequest(\"{{host}}term\", function (err, response) {",
+							"    console.log(response.json());",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 250ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(250);",
+							"});",
+							"",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Message is found\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Terms not found in database\");",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Request Controller",
+			"description": "",
+			"item": [
+				{
+					"name": "GetListOfRequestByUserId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "244c55b5-4f80-4943-a2e5-eda5122746be",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}request/{{Ian}}",
+							"host": [
+								"{{host}}request"
+							],
+							"path": [
+								"{{Ian}}"
+							]
+						},
+						"description": "See the list of requests made by a specific user"
+					},
+					"response": []
+				},
+				{
+					"name": "GetListOfRequestReviewedByUserId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "896b40d5-dec7-4249-94c3-a6667ec438c1",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}request/reviewed",
+							"host": [
+								"{{host}}request"
+							],
+							"path": [
+								"reviewed"
+							]
+						},
+						"description": "Where you can check the status of the request."
+					},
+					"response": [
+						{
+							"id": "3280dbaf-c9b3-46b5-beed-e686611447fc",
+							"name": "GetListOfRequestReviewedByUserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "G-TOKEN",
+										"value": "ROM831ESV",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}api/request/reviewed",
+									"host": [
+										"{{host}}api"
+									],
+									"path": [
+										"request",
+										"reviewed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2018 19:21:54 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"name": "transfer-encoding",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "228",
+							"body": "{\"payload\":[{\"requestId\":33,\"studentUserId\":\"bar5421\",\"studentIdNumber\":\"108479695\",\"legalFirstName\":\"Barrie\",\"legalLastName\":\"Mao\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Management Information Systems\",\"major2\":\"Accounting Theory and Practice\",\"minor\":null,\"registrationDate\":\"2017-04-10T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"barrie.mao.109@my.csun.edu\"},{\"requestId\":34,\"studentUserId\":\"sgs98127\",\"studentIdNumber\":\"108479708\",\"legalFirstName\":\"Soledad\",\"legalLastName\":\"Stoker\",\"courseName\":\"ACCT 440\",\"sectionId\":13339,\"major1\":\"Accounting Theory and Practice\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-23T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-15T00:00:00\",\"studentEmailAddress\":\"soledad.stoker.241@my.csun.edu\"},{\"requestId\":35,\"studentUserId\":\"cng47484\",\"studentIdNumber\":\"108479696\",\"legalFirstName\":\"Corene\",\"legalLastName\":\"Glaude\",\"courseName\":\"IS 451\",\"sectionId\":13494,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-11T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-11T00:00:00\",\"studentEmailAddress\":\"corene.glaude.334@my.csun.edu\"},{\"requestId\":36,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 431\",\"sectionId\":13775,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-16T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":37,\"studentUserId\":\"mh64264\",\"studentIdNumber\":\"108479705\",\"legalFirstName\":\"Mittie\",\"legalLastName\":\"Hereford\",\"courseName\":\"IS 435\",\"sectionId\":13774,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-20T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-17T00:00:00\",\"studentEmailAddress\":\"mittie.hereford.143@my.csun.edu\"},{\"requestId\":38,\"studentUserId\":\"eea42116\",\"studentIdNumber\":\"108479697\",\"legalFirstName\":\"Emory\",\"legalLastName\":\"Armour\",\"courseName\":\"IS 431\",\"sectionId\":13775,\"major1\":\"Accounting\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-12T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-12T00:00:00\",\"studentEmailAddress\":\"emory.armour.291@my.csun.edu\"},{\"requestId\":39,\"studentUserId\":\"len15222\",\"studentIdNumber\":\"108479704\",\"legalFirstName\":\"Lenna\",\"legalLastName\":\"Sciacca\",\"courseName\":\"IS 435\",\"sectionId\":13774,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-19T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-20T00:00:00\",\"studentEmailAddress\":\"lenna.sciacca.322@my.csun.edu\"},{\"requestId\":40,\"studentUserId\":\"eli08700\",\"studentIdNumber\":\"108479698\",\"legalFirstName\":\"Elinor\",\"legalLastName\":\"Warn\",\"courseName\":\"IS 312\",\"sectionId\":13480,\"major1\":\"Accounting Theory and Msa\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-13T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-13T00:00:00\",\"studentEmailAddress\":\"elinor.warn.271@my.csun.edu\"},{\"requestId\":41,\"studentUserId\":\"kbc57700\",\"studentIdNumber\":\"108479703\",\"legalFirstName\":\"Catrina\",\"legalLastName\":\"Knupp\",\"courseName\":\"IS 451\",\"sectionId\":13380,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":\"Accounting\",\"registrationDate\":\"2017-04-18T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-20T00:00:00\",\"studentEmailAddress\":\"catrina.knupp.297@my.csun.edu\"},{\"requestId\":42,\"studentUserId\":\"ell23358\",\"studentIdNumber\":\"108479699\",\"legalFirstName\":\"Ellis\",\"legalLastName\":\"Mcquarrie\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Computer Information Tech\",\"major2\":null,\"minor\":\"Accountancy Info Systems\",\"registrationDate\":\"2017-04-14T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-14T00:00:00\",\"studentEmailAddress\":\"ellis.mcquarrie.123@my.csun.edu\"},{\"requestId\":43,\"studentUserId\":\"jse12395\",\"studentIdNumber\":\"108479702\",\"legalFirstName\":\"Jewell\",\"legalLastName\":\"Swinger\",\"courseName\":\"ACCT 220\",\"sectionId\":13438,\"major1\":\"Pre Accountancy\",\"major2\":\"Accounting\",\"minor\":null,\"registrationDate\":\"2017-04-17T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-25T00:00:00\",\"studentEmailAddress\":\"jewell.swinger.338@my.csun.edu\"},{\"requestId\":45,\"studentUserId\":\"jse12395\",\"studentIdNumber\":\"108479702\",\"legalFirstName\":\"Jewell\",\"legalLastName\":\"Swinger\",\"courseName\":\"ACCT 220\",\"sectionId\":13439,\"major1\":\"Pre Accountancy\",\"major2\":\"Accounting\",\"minor\":null,\"registrationDate\":\"2017-04-17T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-26T00:00:00\",\"studentEmailAddress\":\"jewell.swinger.338@my.csun.edu\"},{\"requestId\":69,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 497 AZ\",\"sectionId\":13745,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"1994-08-27T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":88,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 497 AZ\",\"sectionId\":13745,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"1994-08-27T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":121,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":122,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":132,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-12-18T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":133,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 351 COM\",\"sectionId\":13365,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-12-25T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"}],\"message\":\"Requests found successfully\",\"statusCode\":200}"
+						}
+					]
+				},
+				{
+					"name": "GetListOfRequestPendingByUserId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ed688a78-37a2-4bbf-9338-f32e502cd133",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}request/pending/",
+							"host": [
+								"{{host}}request"
+							],
+							"path": [
+								"pending",
+								""
+							]
+						},
+						"description": "Where you see the request has been received but not yet reviewed."
+					},
+					"response": [
+						{
+							"id": "2cdb3b4c-dc5e-4047-9932-2ba27f4500f7",
+							"name": "GetListOfRequestPendingByUserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "G-TOKEN",
+										"value": "ROM831ESV"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{Host}}api/request/pending",
+									"host": [
+										"{{Host}}api"
+									],
+									"path": [
+										"request",
+										"pending"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2018 19:19:58 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"name": "transfer-encoding",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"responseTime": "257",
+							"body": "{\"payload\":[{\"requestId\":134,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 352\",\"sectionId\":13367,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-25T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":135,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-26T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":136,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 460\",\"sectionId\":13343,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-29T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":137,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":138,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":139,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 350\",\"sectionId\":13618,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":140,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13438,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":141,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 230\",\"sectionId\":13443,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":142,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 350\",\"sectionId\":13618,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":143,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13480,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-07-13T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"}],\"message\":\"Requests found successfully\",\"statusCode\":200}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PreRequisite Controller",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Error Controller",
+			"description": "",
+			"item": [
+				{
+					"name": "GetErrorHandler",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5e23fb40-b5c0-4568-98e1-52e2b9aa858b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}Error/ErrorHandler",
+							"host": [
+								"{{host}}Error"
+							],
+							"path": [
+								"ErrorHandler"
+							]
+						},
+						"description": "This is what you would see if you got a Server error"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d12da1de-cd94-4a12-a24a-255ffe880b47",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c4c62e2-d8d2-4c74-b15e-91e5edfdd4e9",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Response time is less than 250ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Status code is 500\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							"",
+							"pm.test(\"Server error has been found\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while proccessing request\");",
+							"});",
+							"",
+							"pm.sendRequest(\"{{host}}Error/ErrorHandler\", function (err, response) {",
+							"    console.log(response.json());",
+							"});",
+							"",
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Server error not found\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Permission Number Controller",
+			"description": "",
+			"item": []
+		}
+	]
+}
