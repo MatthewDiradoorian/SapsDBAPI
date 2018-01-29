@@ -725,6 +725,26 @@
         {
           "_postman_id": "9aaf3b69-d994-4e43-1b18-6283ff771912",
           "name": "GetUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "75df8d6e-84ca-4382-8830-6bbf120bd24f",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Response is successful.\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"User information for dhs58586 returned successfully\");",
+                  "});",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [],
