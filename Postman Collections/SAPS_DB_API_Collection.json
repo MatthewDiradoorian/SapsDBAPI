@@ -172,6 +172,30 @@
             "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
+        },
+        {
+          "_postman_id": "0992fb04-2fb1-6184-f321-ce2dbb749aff",
+          "name": "Get Terms copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "61525c19-47dc-4488-a7f7-de149f89ffc4",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "{{host}}term",
+            "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
+          },
+          "response": []
         }
       ],
       "event": [
