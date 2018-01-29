@@ -274,15 +274,75 @@
       "item": [
         {
           "_postman_id": "6eeb2be9-81d6-c80a-73a0-2b27a75dfd75",
-          "name": "Pass: Get Terms",
+          "name": "Get Terms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "61525c19-47dc-4488-a7f7-de149f89ffc4",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [],
             "body": {},
             "url": "{{host}}term",
-            "description": null
+            "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "af820438-fda8-4136-98ce-9d2e68b7610d",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "0c1b2bde-1342-4743-aebf-9d330ff152e8",
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response time is less than 200ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);",
+              "});",
+              "",
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Message is found\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Terms found successfully\");",
+              "});",
+              "",
+              "pm.sendRequest(\"{{host}}term\", function (err, response) {",
+              "    console.log(response.json());",
+              "});",
+              "",
+              "pm.test(\"Response time is less than 250ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(250);",
+              "});",
+              "",
+              "pm.test(\"Status code is 404\", function () {",
+              "    pm.response.to.have.status(404);",
+              "});",
+              "",
+              "pm.test(\"Message is found\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Terms not found in database\");",
+              "});"
+            ]
+          }
         }
       ]
     },
@@ -542,26 +602,6 @@
               "body": "{\"payload\":[{\"requestId\":134,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 352\",\"sectionId\":13367,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-25T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":135,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-26T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":136,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 460\",\"sectionId\":13343,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-29T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":137,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":138,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13440,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":139,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 350\",\"sectionId\":13618,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":140,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 220\",\"sectionId\":13438,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":141,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 230\",\"sectionId\":13443,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":142,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 350\",\"sectionId\":13618,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-12-30T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":143,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13480,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"PENDING\",\"dateOfRequest\":\"2017-07-13T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"}],\"message\":\"Requests found successfully\",\"statusCode\":200}"
             }
           ]
-        },
-        {
-          "_postman_id": "e1e90b17-af21-3e6d-af59-f649ebcb2259",
-          "name": "ReqestingAClass",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n        \"sectionNumber\": 13441,\n        \"studentUserId\": \"icl33037\",\n        \"dateOfRequest\": \"08/27/1994\",\n        \"message\": \"Hi please let me request classes, please\"\n}"
-            },
-            "url": "{{host}}request/",
-            "description": null
-          },
-          "response": []
         }
       ]
     },
@@ -578,25 +618,15 @@
       "item": [
         {
           "_postman_id": "b1850386-0796-0fb6-f8c3-b3ace1993088",
-          "name": "Pass: GetErrorHandler",
+          "name": "GetErrorHandler",
           "event": [
             {
               "listen": "test",
               "script": {
-                "id": "1aa53546-ee87-4540-a165-5203639463c9",
+                "id": "5e23fb40-b5c0-4568-98e1-52e2b9aa858b",
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Response time is less than 250ms\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
-                  "});",
-                  "",
-                  "pm.test(\"Status code is 500\", function () {",
-                  "    pm.response.to.have.status(500);",
-                  "});",
-                  "",
-                  "pm.test(\"Body matches string\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while procession request\");",
-                  "});"
+                  ""
                 ]
               }
             }
@@ -612,43 +642,50 @@
             "description": "This is what you would see if you got a Server error"
           },
           "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "d12da1de-cd94-4a12-a24a-255ffe880b47",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         },
         {
-          "_postman_id": "b8ee2646-2ab4-efb9-5b7c-3c680e22218b",
-          "name": "Error: GetErrorHandler",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "513bcdb9-a60b-4668-b541-09c90dea3e03",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Response time is less than 200ms\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
-                  "});",
-                  "",
-                  "pm.test(\"Status code is 400\", function () {",
-                  "    pm.response.to.have.status(400);",
-                  "});",
-                  "",
-                  "pm.test(\"Body matches string\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{host}}Error/ErrorHandler",
-            "description": "This is what you would see if you got a Server error"
-          },
-          "response": []
+          "listen": "test",
+          "script": {
+            "id": "8c4c62e2-d8d2-4c74-b15e-91e5edfdd4e9",
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response time is less than 250ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);",
+              "});",
+              "",
+              "pm.test(\"Status code is 500\", function () {",
+              "    pm.response.to.have.status(500);",
+              "});",
+              "",
+              "pm.test(\"Server error has been found\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while proccessing request\");",
+              "});",
+              "",
+              "pm.sendRequest(\"{{host}}Error/ErrorHandler\", function (err, response) {",
+              "    console.log(response.json());",
+              "});",
+              "",
+              "pm.test(\"Status code is 400\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test(\"Server error not found\", function () {",
+              "    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
+              "});"
+            ]
+          }
         }
       ]
     },
