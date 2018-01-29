@@ -583,18 +583,7 @@
             "id": "8c4c62e2-d8d2-4c74-b15e-91e5edfdd4e9",
             "type": "text/javascript",
             "exec": [
-              "",
-              "pm.sendRequest(\"{{host}}Error/ErrorHandler\", function (err, response) {",
-              "    console.log(response.json());",
-              "});",
-              "",
-              "pm.test(\"Status code is 400\", function () {",
-              "    pm.response.to.have.status(400);",
-              "});",
-              "",
-              "pm.test(\"Server error not found\", function () {",
-              "    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
-              "});"
+              ""
             ]
           }
         }
