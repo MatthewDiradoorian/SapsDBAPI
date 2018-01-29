@@ -721,7 +721,20 @@
       "_postman_id": "edfe8f76-13f9-e371-fd2c-76b168580dff",
       "name": "User Controller",
       "description": "Where we test our User Controller",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "9aaf3b69-d994-4e43-1b18-6283ff771912",
+          "name": "GetUser",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "{{host}}user/dhs58586",
+            "description": null
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
