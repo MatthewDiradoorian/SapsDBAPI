@@ -175,7 +175,7 @@
         },
         {
           "_postman_id": "0992fb04-2fb1-6184-f321-ce2dbb749aff",
-          "name": "Get Terms copy",
+          "name": "Fail: Get Term",
           "event": [
             {
               "listen": "test",
