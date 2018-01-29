@@ -555,10 +555,16 @@
             {
               "listen": "test",
               "script": {
-                "id": "5e23fb40-b5c0-4568-98e1-52e2b9aa858b",
+                "id": "d04be8e2-d8d2-4bb5-bfe0-f9c8457c8130",
                 "type": "text/javascript",
                 "exec": [
-                  ""
+                  "pm.test(\"Status code is 404\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  "pm.test(\"Server error not found\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
+                  "});"
                 ]
               }
             }
@@ -570,7 +576,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}Error/ErrorHandler",
+            "url": "{{host}}Error/",
             "description": "This is what you would see if you got a Server error"
           },
           "response": []
