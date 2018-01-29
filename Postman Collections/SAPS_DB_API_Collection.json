@@ -716,6 +716,12 @@
       "name": "Permission Number Controller",
       "description": "",
       "item": []
+    },
+    {
+      "_postman_id": "edfe8f76-13f9-e371-fd2c-76b168580dff",
+      "name": "User Controller",
+      "description": "Where we test our User Controller",
+      "item": []
     }
   ]
 }
