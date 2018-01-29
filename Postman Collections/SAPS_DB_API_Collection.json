@@ -280,7 +280,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}request/{{Ian}}",
+            "url": "{{host}}request/reviewed",
             "description": "See the list of requests made by a specific user"
           },
           "response": []
