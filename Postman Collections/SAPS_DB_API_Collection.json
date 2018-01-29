@@ -518,10 +518,20 @@
             {
               "listen": "test",
               "script": {
-                "id": "5e23fb40-b5c0-4568-98e1-52e2b9aa858b",
+                "id": "902fe14b-485c-4c3e-8d11-5b5130a772c4",
                 "type": "text/javascript",
                 "exec": [
-                  ""
+                  "pm.test(\"Response time is less than 250ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 500\", function () {",
+                  "    pm.response.to.have.status(500);",
+                  "});",
+                  "",
+                  "pm.test(\"Server error has been found\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while proccessing request\");",
+                  "});"
                 ]
               }
             }
