@@ -555,15 +555,15 @@
             {
               "listen": "test",
               "script": {
-                "id": "d04be8e2-d8d2-4bb5-bfe0-f9c8457c8130",
+                "id": "04f6ec59-2c95-49cc-afb8-8764bc8d4a61",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 404\", function () {",
-                  "    pm.response.to.have.status(400);",
+                  "    pm.response.to.have.status(404);",
                   "});",
                   "",
                   "pm.test(\"Server error not found\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"Internal server error not found\");",
+                  "    pm.expect(pm.response.text()).to.include(\"\");",
                   "});"
                 ]
               }
