@@ -190,7 +190,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "4e8e2d6f-2faa-47da-b8b9-163a59ab4d36",
+                "id": "fcf4c3ac-146a-46fd-9d0c-512fe340bee1",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Response time is less than 250ms\", function () {",
@@ -201,8 +201,8 @@
                   "    pm.response.to.have.status(404);",
                   "});",
                   "",
-                  "pm.test(\"Message is found\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"Terms not found in database\");",
+                  "pm.test(\"Message is not found\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"\");",
                   "});"
                 ]
               }
