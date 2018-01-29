@@ -537,6 +537,33 @@
             "description": "This is what you would see if you got a Server error"
           },
           "response": []
+        },
+        {
+          "_postman_id": "2e515884-7966-5a2a-ef4a-d203c12c42f9",
+          "name": "GetErrorHandler copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "5e23fb40-b5c0-4568-98e1-52e2b9aa858b",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{host}}Error/ErrorHandler",
+            "description": "This is what you would see if you got a Server error"
+          },
+          "response": []
         }
       ],
       "event": [
