@@ -225,33 +225,7 @@
             "id": "0c1b2bde-1342-4743-aebf-9d330ff152e8",
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Response time is less than 200ms\", function () {",
-              "    pm.expect(pm.response.responseTime).to.be.below(200);",
-              "});",
-              "",
-              "pm.test(\"Status code is 200\", function () {",
-              "    pm.response.to.have.status(200);",
-              "});",
-              "",
-              "pm.test(\"Message is found\", function () {",
-              "    pm.expect(pm.response.text()).to.include(\"Terms found successfully\");",
-              "});",
-              "",
-              "pm.sendRequest(\"{{host}}term\", function (err, response) {",
-              "    console.log(response.json());",
-              "});",
-              "",
-              "pm.test(\"Response time is less than 250ms\", function () {",
-              "    pm.expect(pm.response.responseTime).to.be.below(250);",
-              "});",
-              "",
-              "pm.test(\"Status code is 404\", function () {",
-              "    pm.response.to.have.status(404);",
-              "});",
-              "",
-              "pm.test(\"Message is found\", function () {",
-              "    pm.expect(pm.response.text()).to.include(\"Terms not found in database\");",
-              "});"
+              ""
             ]
           }
         }
