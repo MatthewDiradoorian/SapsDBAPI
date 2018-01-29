@@ -271,7 +271,20 @@
       "_postman_id": "9a0168bd-58c8-1760-5388-b426ee74350c",
       "name": "Term Controller",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "6eeb2be9-81d6-c80a-73a0-2b27a75dfd75",
+          "name": "Pass: Get Terms",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "{{host}}term",
+            "description": null
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "174a9228-2180-5d1a-b593-f829f8544cb3",
