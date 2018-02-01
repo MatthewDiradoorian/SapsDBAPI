@@ -546,7 +546,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "902fe14b-485c-4c3e-8d11-5b5130a772c4",
+                "id": "26bb7ac6-0889-4460-a845-55fd98239606",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Response time is less than 250ms\", function () {",
@@ -559,7 +559,25 @@
                   "",
                   "pm.test(\"Server error has been found\", function () {",
                   "    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while proccessing request\");",
-                  "});"
+                  "});",
+                  "const errorSchema = {",
+                  "  \"type\": \"object\",",
+                  "  \"payload\": {",
+                  "    \"message\": {",
+                  "      \"type\": \"string\",",
+                  "      \"minLength\": 53,",
+                  "      \"maxLength\": 60",
+                  "    },",
+                  "    \"statusCode\": {",
+                  "      \"type\": \"integer\",",
+                  "      \"minimum\": 499,",
+                  "      \"maximum\": 501",
+                  "    }",
+                  "  }",
+                  "};",
+                  "var error = JSON.parse(responseBody);",
+                  "tests[\"Error is valid\"] = tv4.validate(error, errorSchema);",
+                  ""
                 ]
               }
             }
