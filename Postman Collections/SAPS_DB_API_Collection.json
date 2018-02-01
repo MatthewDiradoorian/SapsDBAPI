@@ -218,7 +218,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "fcf4c3ac-146a-46fd-9d0c-512fe340bee1",
+                "id": "7db7cacc-6928-4072-861e-3b88245f63f8",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Response time is less than 250ms\", function () {",
