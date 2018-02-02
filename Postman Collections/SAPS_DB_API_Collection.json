@@ -373,45 +373,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "3609f8a8-c0b6-b2f8-8374-0ec43858526a",
-          "name": "GetListOfRequestByUserId",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "244c55b5-4f80-4943-a2e5-eda5122746be",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "G-TOKEN",
-                "value": "ROM831ESV"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{host}}request/reviewed",
-            "description": "See the list of requests made by a specific user"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "7abbcf89-5c81-7f42-098e-a28ec3b2a955",
           "name": "GetListOfRequestReviewedByUserId",
           "event": [
@@ -517,6 +478,45 @@
               "body": "{\"payload\":[{\"requestId\":33,\"studentUserId\":\"bar5421\",\"studentIdNumber\":\"108479695\",\"legalFirstName\":\"Barrie\",\"legalLastName\":\"Mao\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Management Information Systems\",\"major2\":\"Accounting Theory and Practice\",\"minor\":null,\"registrationDate\":\"2017-04-10T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"barrie.mao.109@my.csun.edu\"},{\"requestId\":34,\"studentUserId\":\"sgs98127\",\"studentIdNumber\":\"108479708\",\"legalFirstName\":\"Soledad\",\"legalLastName\":\"Stoker\",\"courseName\":\"ACCT 440\",\"sectionId\":13339,\"major1\":\"Accounting Theory and Practice\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-23T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-15T00:00:00\",\"studentEmailAddress\":\"soledad.stoker.241@my.csun.edu\"},{\"requestId\":35,\"studentUserId\":\"cng47484\",\"studentIdNumber\":\"108479696\",\"legalFirstName\":\"Corene\",\"legalLastName\":\"Glaude\",\"courseName\":\"IS 451\",\"sectionId\":13494,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-11T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-11T00:00:00\",\"studentEmailAddress\":\"corene.glaude.334@my.csun.edu\"},{\"requestId\":36,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 431\",\"sectionId\":13775,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-16T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":37,\"studentUserId\":\"mh64264\",\"studentIdNumber\":\"108479705\",\"legalFirstName\":\"Mittie\",\"legalLastName\":\"Hereford\",\"courseName\":\"IS 435\",\"sectionId\":13774,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-20T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-17T00:00:00\",\"studentEmailAddress\":\"mittie.hereford.143@my.csun.edu\"},{\"requestId\":38,\"studentUserId\":\"eea42116\",\"studentIdNumber\":\"108479697\",\"legalFirstName\":\"Emory\",\"legalLastName\":\"Armour\",\"courseName\":\"IS 431\",\"sectionId\":13775,\"major1\":\"Accounting\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-12T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-12T00:00:00\",\"studentEmailAddress\":\"emory.armour.291@my.csun.edu\"},{\"requestId\":39,\"studentUserId\":\"len15222\",\"studentIdNumber\":\"108479704\",\"legalFirstName\":\"Lenna\",\"legalLastName\":\"Sciacca\",\"courseName\":\"IS 435\",\"sectionId\":13774,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-19T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-20T00:00:00\",\"studentEmailAddress\":\"lenna.sciacca.322@my.csun.edu\"},{\"requestId\":40,\"studentUserId\":\"eli08700\",\"studentIdNumber\":\"108479698\",\"legalFirstName\":\"Elinor\",\"legalLastName\":\"Warn\",\"courseName\":\"IS 312\",\"sectionId\":13480,\"major1\":\"Accounting Theory and Msa\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-13T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-13T00:00:00\",\"studentEmailAddress\":\"elinor.warn.271@my.csun.edu\"},{\"requestId\":41,\"studentUserId\":\"kbc57700\",\"studentIdNumber\":\"108479703\",\"legalFirstName\":\"Catrina\",\"legalLastName\":\"Knupp\",\"courseName\":\"IS 451\",\"sectionId\":13380,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":\"Accounting\",\"registrationDate\":\"2017-04-18T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-20T00:00:00\",\"studentEmailAddress\":\"catrina.knupp.297@my.csun.edu\"},{\"requestId\":42,\"studentUserId\":\"ell23358\",\"studentIdNumber\":\"108479699\",\"legalFirstName\":\"Ellis\",\"legalLastName\":\"Mcquarrie\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Computer Information Tech\",\"major2\":null,\"minor\":\"Accountancy Info Systems\",\"registrationDate\":\"2017-04-14T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-14T00:00:00\",\"studentEmailAddress\":\"ellis.mcquarrie.123@my.csun.edu\"},{\"requestId\":43,\"studentUserId\":\"jse12395\",\"studentIdNumber\":\"108479702\",\"legalFirstName\":\"Jewell\",\"legalLastName\":\"Swinger\",\"courseName\":\"ACCT 220\",\"sectionId\":13438,\"major1\":\"Pre Accountancy\",\"major2\":\"Accounting\",\"minor\":null,\"registrationDate\":\"2017-04-17T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-25T00:00:00\",\"studentEmailAddress\":\"jewell.swinger.338@my.csun.edu\"},{\"requestId\":45,\"studentUserId\":\"jse12395\",\"studentIdNumber\":\"108479702\",\"legalFirstName\":\"Jewell\",\"legalLastName\":\"Swinger\",\"courseName\":\"ACCT 220\",\"sectionId\":13439,\"major1\":\"Pre Accountancy\",\"major2\":\"Accounting\",\"minor\":null,\"registrationDate\":\"2017-04-17T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-26T00:00:00\",\"studentEmailAddress\":\"jewell.swinger.338@my.csun.edu\"},{\"requestId\":69,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 497 AZ\",\"sectionId\":13745,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"1994-08-27T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":88,\"studentUserId\":\"mma13683\",\"studentIdNumber\":\"108479706\",\"legalFirstName\":\"Meshal\",\"legalLastName\":\"Alfantoukh\",\"courseName\":\"IS 497 AZ\",\"sectionId\":13745,\"major1\":\"Information Sys Business\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-21T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"1994-08-27T00:00:00\",\"studentEmailAddress\":\"meshal.alfantoukh.313@my.csun.edu\"},{\"requestId\":121,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":122,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-07-10T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":132,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"IS 312\",\"sectionId\":13486,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"APPROVED\",\"dateOfRequest\":\"2017-12-18T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"},{\"requestId\":133,\"studentUserId\":\"icl33037\",\"studentIdNumber\":\"106390880\",\"legalFirstName\":\"Ian\",\"legalLastName\":\"Laue\",\"courseName\":\"ACCT 351 COM\",\"sectionId\":13365,\"major1\":\"Information Sys Info Tech\",\"major2\":null,\"minor\":null,\"registrationDate\":\"2017-04-15T00:00:00\",\"statusCode\":\"REJECTED\",\"dateOfRequest\":\"2017-12-25T00:00:00\",\"studentEmailAddress\":\"ian.laue.268@my.csun.edu\"}],\"message\":\"Requests found successfully\",\"statusCode\":200}"
             }
           ]
+        },
+        {
+          "_postman_id": "3609f8a8-c0b6-b2f8-8374-0ec43858526a",
+          "name": "GetListOfRequestByUserId",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "244c55b5-4f80-4943-a2e5-eda5122746be",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "G-TOKEN",
+                "value": "ROM831ESV"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{host}}request/reviewed",
+            "description": "See the list of requests made by a specific user"
+          },
+          "response": []
         },
         {
           "_postman_id": "cd1630de-5b85-4e34-89cf-c064c1d4cd00",
