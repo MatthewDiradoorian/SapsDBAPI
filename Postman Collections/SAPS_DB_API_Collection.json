@@ -486,7 +486,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "0ef801e2-6498-4cc3-b734-ca93e090f088",
+                "id": "f6d50970-7a5e-44ac-bd9c-9fac1340eee9",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -611,7 +611,7 @@
                   "  }",
                   "};",
                   "var request = JSON.parse(responseBody);",
-                  "tests[\"Request is valid\"] = tv4.validate(reques, requestUIDSchema);",
+                  "tests[\"Request is valid\"] = tv4.validate(request, requestSIDSchema);",
                   ""
                 ]
               }
