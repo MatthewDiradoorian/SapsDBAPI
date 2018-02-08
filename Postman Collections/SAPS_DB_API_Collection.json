@@ -669,7 +669,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}request/pending/",
+            "url": "http://csunsapsstaging-dbapi.us-west-1.elasticbeanstalk.com/api/request/pending/",
             "description": "Where you see the request has been received but not yet reviewed."
           },
           "response": [
