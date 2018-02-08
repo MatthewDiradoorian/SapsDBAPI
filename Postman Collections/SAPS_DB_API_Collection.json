@@ -531,7 +531,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://csunsaps-dbapi-devv.us-west-1.elasticbeanstalk.com/api/request/pending/",
+            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/request/pending/",
             "description": "Where you see the request has been received but not yet reviewed."
           },
           "response": []
