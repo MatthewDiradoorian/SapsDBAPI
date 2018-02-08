@@ -535,6 +535,18 @@
             "description": "Where you see the request has been received but not yet reviewed."
           },
           "response": []
+        },
+        {
+          "_postman_id": "17ff706b-73ec-61a0-838c-51b98b5e1971",
+          "name": "DetailsOfRequest",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/request/detail/4",
+            "description": "Where we get the details of requests a student has made. It includes their personal information and all the course information as well."
+          },
+          "response": []
         }
       ]
     },
