@@ -304,7 +304,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}term",
+            "url": "http://csunsapsstaging-dbapi.us-west-1.elasticbeanstalk.com/api/term",
             "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
