@@ -401,11 +401,8 @@
                 "value": "ROM831ESV"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{host}}request/reviewed",
+            "body": {},
+            "url": "http://csunsapsstaging-dbapi.us-west-1.elasticbeanstalk.com/api/request/reviewed",
             "description": "Where you can check the status of the request."
           },
           "response": [
