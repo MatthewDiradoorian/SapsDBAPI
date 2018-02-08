@@ -837,7 +837,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}Error/",
+            "url": "http://csunsapsstaging-dbapi.us-west-1.elasticbeanstalk.com/api/Error/",
             "description": "This is what you would see if you got a Server error"
           },
           "response": []
