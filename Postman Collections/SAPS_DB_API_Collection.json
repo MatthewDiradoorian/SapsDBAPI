@@ -269,7 +269,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "http://csunsaps-dbapi-devv.us-west-1.elasticbeanstalk.com/api/term/2121",
+            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/term/2121",
             "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
