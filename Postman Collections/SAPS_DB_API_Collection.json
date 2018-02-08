@@ -965,7 +965,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}user/mh64264",
+            "url": "http://csunsapsstaging-dbapi.us-west-1.elasticbeanstalk.com/api/user/mh64264",
             "description": null
           },
           "response": []
