@@ -543,13 +543,13 @@
             {
               "listen": "test",
               "script": {
-                "id": "4e41e7bf-1d52-4af9-938d-a1a4abdb9a3e",
+                "id": "6913ac45-2c7d-4ec0-b593-ba0a511b6e85",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
-                  "const requestDoRSchema = {",
+                  "var requestDoRSchema = {",
                   "  \"type\": \"object\",",
                   "  \"payload\": {",
                   "    \"student\":{",
