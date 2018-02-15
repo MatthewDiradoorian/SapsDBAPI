@@ -751,7 +751,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "26bb7ac6-0889-4460-a845-55fd98239606",
+                "id": "8efe12b9-fb5b-461b-baa4-91904392d2ad",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Response time is less than 250ms\", function () {",
@@ -765,7 +765,7 @@
                   "pm.test(\"Server error has been found\", function () {",
                   "    pm.expect(pm.response.text()).to.include(\"Internal server error occurred while proccessing request\");",
                   "});",
-                  "const errorSchema = {",
+                  "var errorSchema = {",
                   "  \"type\": \"object\",",
                   "  \"payload\": {",
                   "    \"message\": {",
