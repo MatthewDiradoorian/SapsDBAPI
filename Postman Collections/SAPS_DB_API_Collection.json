@@ -18,7 +18,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "4136607d-7216-4d02-9771-6c2ad65c08fe",
+                "id": "9de2f34a-6731-488b-a410-4705523f259c",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -29,7 +29,7 @@
                   "    pm.expect(pm.response.responseTime).to.be.below(200);",
                   "});",
                   "",
-                  "const userSchema = {",
+                  "var userSchema = {",
                   "  \"type\": \"object\",",
                   "  \"payload\": {",
                   "    \"courseId\": {",
