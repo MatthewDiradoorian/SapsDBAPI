@@ -345,13 +345,13 @@
             {
               "listen": "test",
               "script": {
-                "id": "f6d50970-7a5e-44ac-bd9c-9fac1340eee9",
+                "id": "100fb1aa-ec94-4c10-b7e2-35d66ab6b413",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
-                  "const requestSIDSchema = {",
+                  "var requestSIDSchema = {",
                   "  \"type\": \"object\",",
                   "  \"payload\": {",
                   "    \"requestId\": {",
