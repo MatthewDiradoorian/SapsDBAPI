@@ -874,7 +874,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "1b581323-451e-4413-b48e-3dd7443a69f3",
+                "id": "bc55233a-211f-4ab2-a148-20ed9bf800bb",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -885,7 +885,7 @@
                   "    pm.expect(pm.response.text()).to.include(\"User information for mh64264 returned successfully\");",
                   "});",
                   "",
-                  "const userSchema = {",
+                  "var userSchema = {",
                   "  \"type\": \"object\",",
                   "  \"payload\": {",
                   "    \"userID\": {",
