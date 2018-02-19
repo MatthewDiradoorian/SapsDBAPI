@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "SAPS DB API Collection",
+    "name": "SAPS_DB_API_Collection",
     "_postman_id": "41ecb4f6-3738-cccc-0246-9a1e558f8165",
     "description": "This is what we can get out of the SAPS API",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
