@@ -982,7 +982,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/user/dhs585867",
+            "url": "https://api.staging.csunsaps.com/api/user/dhs585867",
             "description": null
           },
           "response": []
