@@ -488,7 +488,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/request/student/icl33037",
+            "url": "https://api.staging.csunsaps.com/api/request/student/icl33037",
             "description": "See the list of requests made by a specific user"
           },
           "response": []
