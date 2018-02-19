@@ -877,6 +877,12 @@
       "name": "Decision Reason Controller",
       "description": "",
       "item": []
+    },
+    {
+      "_postman_id": "16da8d0e-2cbd-3167-3345-9aa4129ba21a",
+      "name": "Message Controller",
+      "description": "",
+      "item": []
     }
   ]
 }
