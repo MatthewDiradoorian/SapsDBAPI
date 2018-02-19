@@ -951,7 +951,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "http://sapsdemodbapi-dev.us-west-1.elasticbeanstalk.com/api/user/mh64264",
+            "url": "https://api.staging.csunsaps.com/api/user/mh64264",
             "description": null
           },
           "response": []
