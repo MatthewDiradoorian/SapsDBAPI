@@ -753,7 +753,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "bc55233a-211f-4ab2-a148-20ed9bf800bb",
+                "id": "998b3b78-1240-4bfe-be1f-7e34c580a874",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -761,7 +761,7 @@
                   "});",
                   "",
                   "pm.test(\"Response is successful.\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"User information for mh64264 returned successfully\");",
+                  "    pm.expect(pm.response.text()).to.include(\"User information for icl33037 returned successfully\");",
                   "});",
                   "",
                   "var userSchema = {",
@@ -834,7 +834,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/user/mh64264",
+            "url": "https://api.staging.csunsaps.com/api/user/icl33037",
             "description": null
           },
           "response": []
