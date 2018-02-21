@@ -18,7 +18,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "f8f7264c-5676-4ead-9cd4-b7e31485ae95",
+                "id": "a15d43e0-5f8d-4e68-849e-ce16ac26edc8",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -27,7 +27,8 @@
                   "",
                   "var userSchema = {",
                   "  \"type\": \"object\",",
-                  "  \"payload\": {",
+                  "  \"properties\": {",
+                  "      \"tags\": {",
                   "    \"courseId\": {",
                   "      \"type\": \"Integer\",",
                   "      \"minimum\": 1,",
@@ -120,10 +121,11 @@
                   "      \"minimum\": 199,",
                   "      \"maximum\": 201",
                   "  }",
+                  "  }",
                   "};",
                   "var user = JSON.parse(responseBody);",
                   "tests[\"User is valid\"] = tv4.validate(user, userSchema);",
-                  "console.log(tv4.error)",
+                  "console.log(\"Validation error: \",tv4.error)",
                   "",
                   ""
                 ]
