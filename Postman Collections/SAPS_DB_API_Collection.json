@@ -18,7 +18,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "381078b0-16e1-4dcb-8ffa-3c912c3f13d7",
+                "id": "f8f7264c-5676-4ead-9cd4-b7e31485ae95",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -123,6 +123,8 @@
                   "};",
                   "var user = JSON.parse(responseBody);",
                   "tests[\"User is valid\"] = tv4.validate(user, userSchema);",
+                  "console.log(tv4.error)",
+                  "",
                   ""
                 ]
               }
