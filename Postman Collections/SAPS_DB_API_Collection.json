@@ -18,7 +18,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "136cda6a-508f-41df-82d7-a05786434491",
+                "id": "b60b7ae4-23b4-437b-b28f-7757c61921b5",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -184,7 +184,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://api.staging.csunsaps.com/api/class/",
+            "url": "https://api.staging.csunsaps.com/api/class",
             "description": "This gets all of the Classes"
           },
           "response": []
