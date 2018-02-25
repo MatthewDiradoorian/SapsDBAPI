@@ -926,7 +926,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "998b3b78-1240-4bfe-be1f-7e34c580a874",
+                "id": "8e55c57a-204e-4f64-893a-1e76c06647bf",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -996,8 +996,25 @@
                   "      \"maximum\": 201",
                   "  }",
                   "};",
-                  "var user = JSON.parse(responseBody);",
-                  "tests[\"User is valid\"] = tv4.validate(user, userSchema);",
+                  "if(pm.response.to.have.status(200) & responseBody !== null & responseBody.length > 0)",
+                  "{",
+                  "    var responseObject = JSON.parse(responseBody);",
+                  "    ",
+                  "    if(tv4.validate(responseObject, userSchema))",
+                  "    {",
+                  "        pm.test('Response is Valid');",
+                  "    }",
+                  "    else",
+                  "    {",
+                  "        pm.test('Response is not Valid: ${tv4.error}');",
+                  "    }",
+                  "}",
+                  "else",
+                  "{",
+                  "    pm.test(\"Response is invalid: Check Status Code\", function() {",
+                  "    pm.expect(response).to.be.false;",
+                  "    });",
+                  "}",
                   ""
                 ]
               }
@@ -1007,7 +1024,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/user/icl33037",
+            "url": "https://api.staging.csunsaps.com/api/user/icl3307",
             "description": null
           },
           "response": []
