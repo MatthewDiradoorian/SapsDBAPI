@@ -926,7 +926,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "9c2b68ce-943f-4bb6-9442-c8d11839c34a",
+                "id": "2287b063-1b1c-4605-b074-dcbbc0ff495f",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -935,8 +935,6 @@
                   "",
                   "",
                   "var user = JSON.parse(responseBody);",
-                  "pm.environment.set(\"userId\", user.payload.userId);",
-                  "",
                   "tests[\"User ID has been found\"] = responseBody.has(\"userId\");",
                   "tests[\"Role has been found\"] = responseBody.has(\"role\");",
                   "tests[\"Legal first name has been found\"] = responseBody.has(\"legalFirstName\");",
@@ -947,19 +945,7 @@
                   "tests[\"Email address has been found\"] = responseBody.has(\"emailAddress\");",
                   "tests[\"Claim has been found\"] = responseBody.has(\"claims\");",
                   "",
-                  "pm.test(\"Response is successful.\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"User information for\"+user.payload.userId+ \"returned successfully\");",
-                  "});",
-                  "console.log(\"idk whats wrong\", tv4.error);",
-                  "",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});"
+                  ""
                 ]
               }
             }
