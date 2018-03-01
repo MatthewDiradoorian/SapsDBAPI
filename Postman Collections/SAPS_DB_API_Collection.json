@@ -103,6 +103,84 @@
       ]
     },
     {
+      "_postman_id": "edfe8f76-13f9-e371-fd2c-76b168580dff",
+      "name": "User Controller",
+      "description": "Where we test our User Controller",
+      "item": [
+        {
+          "_postman_id": "9aaf3b69-d994-4e43-1b18-6283ff771912",
+          "name": "GetUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2287b063-1b1c-4605-b074-dcbbc0ff495f",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "",
+                  "var user = JSON.parse(responseBody);",
+                  "tests[\"User ID has been found\"] = responseBody.has(\"userId\");",
+                  "tests[\"Role has been found\"] = responseBody.has(\"role\");",
+                  "tests[\"Legal first name has been found\"] = responseBody.has(\"legalFirstName\");",
+                  "tests[\"Legal Last name has been found\"] = responseBody.has(\"legalLastName\");",
+                  "tests[\"Preferred first name has been found\"] = responseBody.has(\"preferredFirstName\");",
+                  "tests[\"Preferred last name has been found\"] = responseBody.has(\"preferredLastName\");",
+                  "tests[\"Phone number has been found\"] = responseBody.has(\"phoneNumber\");",
+                  "tests[\"Email address has been found\"] = responseBody.has(\"emailAddress\");",
+                  "tests[\"Claim has been found\"] = responseBody.has(\"claims\");",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://api.staging.csunsaps.com/api/user/icl33037",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "35b436e5-ce92-d26c-5136-c4586858835a",
+          "name": "Fail: GetUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "15826bff-5a4f-4e62-afc7-8737745a6b3c",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 404\", function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});",
+                  "",
+                  "pm.test(\"Response is successful.\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"User dhs585867 not found in databse\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://api.staging.csunsaps.com/api/user/dhs585867",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "9a0168bd-58c8-1760-5388-b426ee74350c",
       "name": "Term Controller",
       "description": "Where we test our Term Controller",
@@ -555,84 +633,6 @@
       "name": "Permission Number Controller",
       "description": "",
       "item": []
-    },
-    {
-      "_postman_id": "edfe8f76-13f9-e371-fd2c-76b168580dff",
-      "name": "User Controller",
-      "description": "Where we test our User Controller",
-      "item": [
-        {
-          "_postman_id": "9aaf3b69-d994-4e43-1b18-6283ff771912",
-          "name": "GetUser",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "2287b063-1b1c-4605-b074-dcbbc0ff495f",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
-                  "",
-                  "",
-                  "var user = JSON.parse(responseBody);",
-                  "tests[\"User ID has been found\"] = responseBody.has(\"userId\");",
-                  "tests[\"Role has been found\"] = responseBody.has(\"role\");",
-                  "tests[\"Legal first name has been found\"] = responseBody.has(\"legalFirstName\");",
-                  "tests[\"Legal Last name has been found\"] = responseBody.has(\"legalLastName\");",
-                  "tests[\"Preferred first name has been found\"] = responseBody.has(\"preferredFirstName\");",
-                  "tests[\"Preferred last name has been found\"] = responseBody.has(\"preferredLastName\");",
-                  "tests[\"Phone number has been found\"] = responseBody.has(\"phoneNumber\");",
-                  "tests[\"Email address has been found\"] = responseBody.has(\"emailAddress\");",
-                  "tests[\"Claim has been found\"] = responseBody.has(\"claims\");",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": "https://api.staging.csunsaps.com/api/user/icl33037",
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "35b436e5-ce92-d26c-5136-c4586858835a",
-          "name": "Fail: GetUser",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "15826bff-5a4f-4e62-afc7-8737745a6b3c",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Status code is 404\", function () {",
-                  "    pm.response.to.have.status(404);",
-                  "});",
-                  "",
-                  "pm.test(\"Response is successful.\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"User dhs585867 not found in databse\");",
-                  "});",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": "https://api.staging.csunsaps.com/api/user/dhs585867",
-            "description": null
-          },
-          "response": []
-        }
-      ]
     },
     {
       "_postman_id": "49b4709a-5a44-60cc-20ea-4e1c05de7bc6",
