@@ -672,7 +672,44 @@
       "_postman_id": "16da8d0e-2cbd-3167-3345-9aa4129ba21a",
       "name": "Message Controller",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "cd57a88a-c434-21a5-4f16-a746294ca2ce",
+          "name": "Message",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fa5eb7b0-ba27-49fd-ad1e-0bcb4964efbe",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Attachment found successfully\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"Attachment found successfully\");",
+                  "});",
+                  "",
+                  "tests[\"Message Attachment ID has been found\"] = responseBody.has(\"messageAttachmentId\");",
+                  "tests[\"Message ID has been found\"] = responseBody.has(\"messageId\");",
+                  "tests[\"File Name has been found\"] = responseBody.has(\"fileName\");",
+                  "tests[\"File Extention has been found\"] = responseBody.has(\"fileExtention\");",
+                  "tests[\"Mime Type has been found\"] = responseBody.has(\"mimeType\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://api.staging.csunsaps.com/api/message/39",
+            "description": null
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
