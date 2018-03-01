@@ -18,12 +18,14 @@
             {
               "listen": "test",
               "script": {
-                "id": "be5c1c2d-4d51-4a44-baa7-27d97c7e2abf",
+                "id": "3683a1b4-05b4-4126-b03e-71071b1c7230",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
+                  "",
+                  "var classes = JSON.parse(responseBody);",
                   "",
                   "tests[\"Course ID has been found\"] = responseBody.has(\"courseId\");",
                   "tests[\"Course Abbreviation has been found\"] = responseBody.has(\"courseAbbreviation\");",
