@@ -632,7 +632,41 @@
       "_postman_id": "49b4709a-5a44-60cc-20ea-4e1c05de7bc6",
       "name": "Decision Reason Controller",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "ea4c2431-521a-9fbc-0a53-fb50a3727cce",
+          "name": "Decision Reason",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e79d4aed-26cf-4aad-8d0f-e9aaaf0fa9c4",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "tests[\"Decision Reason ID has been found\"] = responseBody.has(\"decisionReasonId\");",
+                  "tests[\"Reason has been found\"] = responseBody.has(\"reason\");",
+                  "",
+                  "pm.test(\"Successfully retrieved decision reasons\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"Successfully retrieved decision reasons\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://api.staging.csunsaps.com/api/decisionreason",
+            "description": null
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "16da8d0e-2cbd-3167-3345-9aa4129ba21a",
