@@ -578,8 +578,6 @@
             {
               "listen": "test",
               "script": {
-                "id": "8e4bb4df-6b09-4cd7-ab27-b8a99dd527ca",
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
@@ -613,7 +611,9 @@
                   "tests[\"Unit Completed has been found\"] = responseBody.has(\"unitCompleted\");",
                   "tests[\"Major Required has been found\"] = responseBody.has(\"majorRequired\");",
                   "tests[\"Consent of Instructor has been found\"] = responseBody.has(\"consentOfInstructor\");"
-                ]
+                ],
+                "id": "8e4bb4df-6b09-4cd7-ab27-b8a99dd527ca",
+                "type": "text/javascript"
               }
             }
           ],
@@ -621,7 +621,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/prerequisite/course/50000",
+            "url": "https://api.staging.csunsaps.com/api/prerequisite/course/49",
             "description": null
           },
           "response": []
