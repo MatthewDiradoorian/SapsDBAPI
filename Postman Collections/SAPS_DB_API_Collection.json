@@ -508,7 +508,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "0d4ff344-812a-48fd-af58-01ad1fdbf252",
+                "id": "000c7aa0-638a-4de7-832d-4d839f3412ec",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
@@ -541,7 +541,7 @@
                   "tests[\"Course Description has been found\"] = responseBody.has(\"courseDescription\");",
                   "tests[\"Sections has been found\"] = responseBody.has(\"sections\");",
                   "tests[\"Section ID has been found\"] = responseBody.has(\"sectionId\");",
-                  "tests[\"Days has been found\"] = responseBody.has(\"days\");",
+                  "tests[\"Days has been found\"] = responseBody.has(\"day\");",
                   "tests[\"Start Time has been found\"] = responseBody.has(\"startTime\");",
                   "tests[\"End Time has been found\"] = responseBody.has(\"endTime\");",
                   "tests[\"Instructor has been found\"] = responseBody.has(\"instructor\");",
