@@ -559,7 +559,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}request/detail/1",
+            "url": "https://api.dev.csunsaps.com/api/request/detail/1",
             "description": "Where we get the details of requests a student has made. It includes their personal information and all the course information as well."
           },
           "response": []
