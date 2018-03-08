@@ -173,7 +173,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/user/dhs585867",
+            "url": "{{host}}user/dhs585867",
             "description": null
           },
           "response": []
