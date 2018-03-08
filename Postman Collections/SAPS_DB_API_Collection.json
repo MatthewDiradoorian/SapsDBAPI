@@ -496,7 +496,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}request/pending/",
+            "url": "https://api.dev.csunsaps.com/api/request/pending/",
             "description": "Where you see the request has been received but not yet reviewed."
           },
           "response": []
