@@ -73,7 +73,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}class",
+            "url": "https://api.dev.csunsaps.com/api/class",
             "description": "This gets all of the Classes"
           },
           "response": []
