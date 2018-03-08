@@ -142,7 +142,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.dev.csunsaps.com/api/user/icl33037",
+            "url": "{{host}}user/icl33037",
             "description": null
           },
           "response": []
