@@ -217,7 +217,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/term",
+            "url": "{{host}}term",
             "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
