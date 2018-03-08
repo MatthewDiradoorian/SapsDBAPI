@@ -661,7 +661,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}decisionreason",
+            "url": "https://api.dev.csunsaps.com/api/decisionreason",
             "description": null
           },
           "response": []
