@@ -73,7 +73,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://api.staging.csunsaps.com/api/class",
+            "url": "https://api.dev.csunsaps.com/api/class",
             "description": "This gets all of the Classes"
           },
           "response": []
