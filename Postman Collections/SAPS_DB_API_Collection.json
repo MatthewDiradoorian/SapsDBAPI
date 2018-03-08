@@ -621,7 +621,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}prerequisite/course/49",
+            "url": "https://api.dev.csunsaps.com/api/prerequisite/course/49",
             "description": null
           },
           "response": []
