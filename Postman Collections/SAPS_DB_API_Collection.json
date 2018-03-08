@@ -420,7 +420,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{host}}request/student/nnv11852",
+            "url": "https://api.dev.csunsaps.com/api/request/student/nnv11852",
             "description": "See the list of requests made by a specific user"
           },
           "response": []
