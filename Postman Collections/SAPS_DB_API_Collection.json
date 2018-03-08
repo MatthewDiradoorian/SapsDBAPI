@@ -353,7 +353,7 @@
               }
             ],
             "body": {},
-            "url": "{{host}}request/reviewed",
+            "url": "https://api.dev.csunsaps.com/api/request/reviewed",
             "description": "Where you can check the status of the request."
           },
           "response": []
