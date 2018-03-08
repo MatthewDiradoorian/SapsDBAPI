@@ -173,7 +173,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}user/dhs585867",
+            "url": "https://api.dev.csunsaps.com/api/user/dhs585867",
             "description": null
           },
           "response": []
