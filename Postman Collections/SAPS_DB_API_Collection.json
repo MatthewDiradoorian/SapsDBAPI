@@ -661,7 +661,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "https://api.staging.csunsaps.com/api/decisionreason",
+            "url": "{{host}}decisionreason",
             "description": null
           },
           "response": []
