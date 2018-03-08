@@ -251,7 +251,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}term/2121",
+            "url": "https://api.dev.csunsaps.com/api/term/2121",
             "description": "This is where we test if the terms are found successfully or not, as well as what message is returned."
           },
           "response": []
