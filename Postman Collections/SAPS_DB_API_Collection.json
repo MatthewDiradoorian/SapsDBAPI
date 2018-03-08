@@ -704,7 +704,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}message/39",
+            "url": "{{host}}message/24",
             "description": null
           },
           "response": []
