@@ -704,7 +704,7 @@
             "method": "GET",
             "header": [],
             "body": {},
-            "url": "{{host}}message/24",
+            "url": "https://api.dev.csunsaps.com/api/message/24",
             "description": null
           },
           "response": []
